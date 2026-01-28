@@ -1,33 +1,30 @@
-print("это программа, для покупки, продужи и тюнинга авто. Можете купить что угодно\n"
-      "хоть гоночный автомобиль хоть БелАз или танк( возможно)... А также строить крьеру\n"
-      "как таксиста или дальнобойщика, так и гонщиком.")
-
+#выполнил Коротаев Алексей ИЭ-71, 28.01.26
+#проект "PLAY_AVTO", про покупку транспорта
 kr = True#
-Money = 500000#переменная для денег(игровой ресурс)
 ot = 0#переменная для хранения выбора пользователя
-avto_garage = 0#
 avto_garage_v = {}#
-avto_garage_v_num = 0#
-avto_money = {##словарь хранящий значения номер - цена авто, но сначала идет выбор региона по номеру( подробнее в блоке {elif ot == "2"})
-    "1" : {"1" : 8000000, "2" : 40000000, "3" : 12000000, "4" : 1600000, "5" : 9000000},#авто из Новосибирска
-    "2" : {"1" : 900000, "2" : 40000000, "3" : 10000000, "4" : 800000, "5" : 75000},#авто из Кемерово
-    "3" : {"1" : 3000000, "2" : 400, "3" : 12000000, "4" : 12000000, "5" : 120000},#авто из Красноярска
-    "4" : {"1" : 400000, "2" : 12000000, "3" : 1000000, "4" : 9800000, "5" : 350000},#авто из Иркутска
-    "5" : {"1" : 60000000, "2" : 46000000, "3" : 210000, "4" : 5000000, "5" : 15000000}#авто из Норильска
-}
-money_avto = {#словарь хранящий значения номер - машина, но сначала идет выбор региона по номеру( подробнее в блоке {elif ot == "2"})
-    "1" : {"1" : "КАМАЗ-5320", "2" : "Т-72", "3" : "КрАЗ-255", "4" : "УАЗ-3303", "5" : "УРАЛ-4320"},#авто из Новосибирска
-    "2" : {"1" : "УАЗ-469", "2" : "ЗИЛ-131", "3" : "УРАЛ-4420", "4" : "ГАЗ-66", "5" : "ВАЗ-2107"},#авто из Кемерово
-    "3" : {"1" : "LADA - VESTA - CROSS", "2" : "УАЗ-452", "3" : "КрАЗ-255", "4" : "ВАЗ-2105", "5" : "ГАЗ-21-М"},#авто из Красноярска
-    "4" : {"1" : "ЗАЗ-968", "2" : "БелАЗ-7522", "3" : "ГАЗ-21", "4" : "УРАЛ-4420", "5" : '"Черная Волга"'},#авто из Иркутска
-    "5" : {"1" : "БелАЗ-75710", "2" : "МИ-24", "3" : "мотоцикл", "4" : "электромобиль(электро-ЗАЗ)", "5" : "ИС-3"}#авто из Норильска
-}
-cmn = 0#количество связей( игровой ресурс)
+avto_money = [#список хранящий значения цен на авто, но сначала идет выбор региона по номеру (подробнее в блоке {elif ot == "2"})
+    [8000000, 40000000, 12000000, 1600000, 9000000],#авто из Новосибирска
+    [ 900000, 40000000, 10000000, 800000, 75000],#авто из Кемерово
+    [ 3000000,  400000, 12000000, 12000000, 120000],#авто из Красноярска
+    [ 400000, 12000000, 1000000, 9800000, 350000],#авто из Иркутска
+    [ 60000000, 46000000, 210000, 5000000, 15000000]#авто из Норильска
+]
+money_avto = [#список хранящий значения машин, но сначала идет выбор региона по номеру (подробнее в блоке {elif ot == "2"})
+    ["КАМАЗ-5320", "Т-72", "КрАЗ-255", "УАЗ-3303", "УРАЛ-4320"],#авто из Новосибирска
+    ["УАЗ-469", "ЗИЛ-131", "УРАЛ-4420", "ГАЗ-66", "ВАЗ-2107"],#авто из Кемерово
+    ["LADA - VESTA - CROSS", "УАЗ-452", "КрАЗ-255", "ВАЗ-2105", "ГАЗ-21-М"],#авто из Красноярска
+    ["ЗАЗ-968", "2", "БелАЗ-7522", "ГАЗ-21", "УРАЛ-4420", '"Черная Волга"'],#авто из Иркутска
+    ["БелАЗ-75710", "МИ-24","мотоцикл","электромобиль(электро-ЗАЗ)","ИС-3"]#авто из Норильска
+]
 l = 0#
 h = 0#
 k = 0#
 j = 0#
 aw = 0#
+hg = 0#
+qh = 0#
+hf = 0#
 while kr:
     l = len(avto_garage_v)
     print("что вы хотите сделать?\n"
@@ -46,17 +43,181 @@ while kr:
               "3.Красноярск\n"
               "4.Иркутск\n"
               "5.Норильск")
-        k = k + 1
-        avto_garage = avto_garage + 1
+        ot = input("регион:")
+        if ot == "1":
+            qh = 0
+            for qf in range(5):
+                hg = qf + 1
+                print(f"{hg}. {money_avto[qh][qf]} за {avto_money[qh][qf]} рублей")
+            ot = input("покупаем?")
+            if ot == "1":
+                hf = 0
+                print("ПРОДАНО!")
+                avto_garage_v[l] = money_avto[qh][hf]
+                money_avto[qh][hf] = "продано"
+            elif ot == "2":
+                hf = 1
+                print("ПРОДАНО!")
+                avto_garage_v[l] = money_avto[qh][hf]
+                money_avto[qh][hf] = "продано"
+            elif ot == "3":
+                hf = 2
+                print("ПРОДАНО!")
+                avto_garage_v[l] = money_avto[qh][hf]
+                money_avto[qh][hf] = "продано"
+            elif ot == "4":
+                hf = 3
+                print("ПРОДАНО!")
+                avto_garage_v[l] = money_avto[qh][hf]
+                money_avto[qh][hf] = "продано"
+            elif ot == "5":
+                hf = 4
+                print("ПРОДАНО!")
+                avto_garage_v[l] = money_avto[qh][hf]
+                money_avto[qh][hf] = "продано"
+            else:
+                print("*нервно*:Ну... Ладно...")
+        elif ot == "2":
+            qh = 1
+            for qf in range(5):
+                hg = qf + 1
+                print(f"{hg}. {money_avto[qh][qf]} за {avto_money[qh][qf]} рублей")
+            ot = input("покупаем?")
+            if ot == "1":
+                hf = 0
+                print("ПРОДАНО!")
+                avto_garage_v[l] = money_avto[qh][hf]
+                money_avto[qh][hf] = "продано"
+            elif ot == "2":
+                hf = 1
+                print("ПРОДАНО!")
+                avto_garage_v[l] = money_avto[qh][hf]
+                money_avto[qh][hf] = "продано"
+            elif ot == "3":
+                hf = 2
+                print("ПРОДАНО!")
+                avto_garage_v[l] = money_avto[qh][hf]
+                money_avto[qh][hf] = "продано"
+            elif ot == "4":
+                hf = 3
+                print("ПРОДАНО!")
+                avto_garage_v[l] = money_avto[qh][hf]
+                money_avto[qh][hf] = "продано"
+            elif ot == "5":
+                hf = 4
+                print("ПРОДАНО!")
+                avto_garage_v[l] = money_avto[qh][hf]
+                money_avto[qh][hf] = "продано"
+            else:
+                print("*нервно*:Ну... Ладно...")
+        elif ot == "3":
+            qh = 2
+            for qf in range(5):
+                hg = qf + 1
+                print(f"{hg}. {money_avto[qh][qf]} за {avto_money[qh][qf]} рублей")
+            ot = input("покупаем?")
+            if ot == "1":
+                hf = 0
+                print("ПРОДАНО!")
+                avto_garage_v[l] = money_avto[qh][hf]
+                money_avto[qh][hf] = "продано"
+            elif ot == "2":
+                hf = 1
+                print("ПРОДАНО!")
+                avto_garage_v[l] = money_avto[qh][hf]
+                money_avto[qh][hf] = "продано"
+            elif ot == "3":
+                hf = 2
+                print("ПРОДАНО!")
+                avto_garage_v[l] = money_avto[qh][hf]
+                money_avto[qh][hf] = "продано"
+            elif ot == "4":
+                hf = 3
+                print("ПРОДАНО!")
+                avto_garage_v[l] = money_avto[qh][hf]
+                money_avto[qh][hf] = "продано"
+            elif ot == "5":
+                hf = 4
+                print("ПРОДАНО!")
+                avto_garage_v[l] = money_avto[qh][hf]
+                money_avto[qh][hf] = "продано"
+            else:
+                print("*нервно*:Ну... Ладно...")
+        elif ot == "4":
+            qh = 3
+            for qf in range(5):
+                hg = qf + 1
+                print(f"{hg}. {money_avto[qh][qf]} за {avto_money[qh][qf]} рублей")
+            ot = input("покупаем?")
+            if ot == "1":
+                hf = 0
+                print("ПРОДАНО!")
+                avto_garage_v[l] = money_avto[qh][hf]
+                money_avto[qh][hf] = "продано"
+            elif ot == "2":
+                hf = 1
+                print("ПРОДАНО!")
+                avto_garage_v[l] = money_avto[qh][hf]
+                money_avto[qh][hf] = "продано"
+            elif ot == "3":
+                hf = 2
+                print("ПРОДАНО!")
+                avto_garage_v[l] = money_avto[qh][hf]
+                money_avto[qh][hf] = "продано"
+            elif ot == "4":
+                hf = 3
+                print("ПРОДАНО!")
+                avto_garage_v[l] = money_avto[qh][hf]
+                money_avto[qh][hf] = "продано"
+            elif ot == "5":
+                hf = 4
+                print("ПРОДАНО!")
+                avto_garage_v[l] = money_avto[qh][hf]
+                money_avto[qh][hf] = "продано"
+            else:
+                print("*нервно*:Ну... Ладно...")
+        elif ot == "5":
+            qh = 4
+            for qf in range(5):
+                hg = qf + 1
+                print(f"{hg}. {money_avto[qh][qf]} за {avto_money[qh][qf]} рублей")
+            ot = input("покупаем?")
+            if ot == "1":
+                hf = 0
+                print("ПРОДАНО!")
+                avto_garage_v[l] = money_avto[qh][hf]
+                money_avto[qh][hf] = "продано"
+            elif ot == "2":
+                hf = 1
+                print("ПРОДАНО!")
+                avto_garage_v[l] = money_avto[qh][hf]
+                money_avto[qh][hf] = "продано"
+            elif ot == "3":
+                hf = 2
+                print("ПРОДАНО!")
+                avto_garage_v[l] = money_avto[qh][hf]
+                money_avto[qh][hf] = "продано"
+            elif ot == "4":
+                hf = 3
+                print("ПРОДАНО!")
+                avto_garage_v[l] = money_avto[qh][hf]
+                money_avto[qh][hf] = "продано"
+            elif ot == "5":
+                hf = 4
+                print("ПРОДАНО!")
+                avto_garage_v[l] = money_avto[qh][hf]
+                money_avto[qh][hf] = "продано"
+            else:
+                print("*нервно*:Ну... Ладно...")
+        else:
+            print("да вам не машину, а образование себе купить... Хотя диплом у вас уже есть, хоть и из метро...")
     elif ot == "3":
         for s in range(l):
             aw = s + 1
             print(f"{aw}. {avto_garage_v.get(j)}")
             j = j + 1
     elif ot == "4":
-        print(f"авто в гараже: {avto_garage}\n"
-              f"деньги: {Money}\n"
-              f"связи: {cmn}\n")
+        print(f"авто в гараже: {l}\n")
     elif ot == "5":
         print("смерть: Пора уходить...\n"
               "я: Подожди... Я был хорощшим человеком?\n"
@@ -64,6 +225,7 @@ while kr:
               "смерть: Встретимся в раю...\n")
         kr = False
     else:
+        kr = False
         print("скорая нужна?\n"
               "1.Да\n"
               "2.Нет")
