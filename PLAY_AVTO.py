@@ -52,29 +52,44 @@ while kr:
             ot = input("покупаем?")
             if ot == "1":
                 hf = 0
-                print("ПРОДАНО!")
-                avto_garage_v[l] = money_avto[qh][hf]
-                money_avto[qh][hf] = "продано"
+                if money_avto[qh][hf] != "продано":
+                    print("ПРОДАНО!")
+                    avto_garage_v[l] = money_avto[qh][hf]
+                    money_avto[qh][hf] = "продано"
+                else:
+                    print("вы уже купили это авто...")
             elif ot == "2":
                 hf = 1
-                print("ПРОДАНО!")
-                avto_garage_v[l] = money_avto[qh][hf]
-                money_avto[qh][hf] = "продано"
+                if money_avto[qh][hf] != "продано":
+                    print("ПРОДАНО!")
+                    avto_garage_v[l] = money_avto[qh][hf]
+                    money_avto[qh][hf] = "продано"
+                else:
+                    print("вы уже купили это авто...")
             elif ot == "3":
                 hf = 2
-                print("ПРОДАНО!")
-                avto_garage_v[l] = money_avto[qh][hf]
-                money_avto[qh][hf] = "продано"
+                if money_avto[qh][hf] != "продано":
+                    print("ПРОДАНО!")
+                    avto_garage_v[l] = money_avto[qh][hf]
+                    money_avto[qh][hf] = "продано"
+                else:
+                    print("вы уже купили это авто...")
             elif ot == "4":
                 hf = 3
-                print("ПРОДАНО!")
-                avto_garage_v[l] = money_avto[qh][hf]
-                money_avto[qh][hf] = "продано"
+                if money_avto[qh][hf] != "продано":
+                    print("ПРОДАНО!")
+                    avto_garage_v[l] = money_avto[qh][hf]
+                    money_avto[qh][hf] = "продано"
+                else:
+                    print("вы уже купили это авто...")
             elif ot == "5":
                 hf = 4
-                print("ПРОДАНО!")
-                avto_garage_v[l] = money_avto[qh][hf]
-                money_avto[qh][hf] = "продано"
+                if money_avto[qh][hf] != "продано":
+                    print("ПРОДАНО!")
+                    avto_garage_v[l] = money_avto[qh][hf]
+                    money_avto[qh][hf] = "продано"
+                else:
+                    print("вы уже купили это авто...")
             else:
                 print("*нервно*:Ну... Ладно...")
         elif ot == "2":
@@ -85,29 +100,44 @@ while kr:
             ot = input("покупаем?")
             if ot == "1":
                 hf = 0
-                print("ПРОДАНО!")
-                avto_garage_v[l] = money_avto[qh][hf]
-                money_avto[qh][hf] = "продано"
+                if money_avto[qh][hf] != "продано":
+                    print("ПРОДАНО!")
+                    avto_garage_v[l] = money_avto[qh][hf]
+                    money_avto[qh][hf] = "продано"
+                else:
+                    print("вы уже купили это авто...")
             elif ot == "2":
                 hf = 1
-                print("ПРОДАНО!")
-                avto_garage_v[l] = money_avto[qh][hf]
-                money_avto[qh][hf] = "продано"
+                if money_avto[qh][hf] != "продано":
+                    print("ПРОДАНО!")
+                    avto_garage_v[l] = money_avto[qh][hf]
+                    money_avto[qh][hf] = "продано"
+                else:
+                    print("вы уже купили это авто...")
             elif ot == "3":
                 hf = 2
-                print("ПРОДАНО!")
-                avto_garage_v[l] = money_avto[qh][hf]
-                money_avto[qh][hf] = "продано"
+                if money_avto[qh][hf] != "продано":
+                    print("ПРОДАНО!")
+                    avto_garage_v[l] = money_avto[qh][hf]
+                    money_avto[qh][hf] = "продано"
+                else:
+                    print("вы уже купили это авто...")
             elif ot == "4":
                 hf = 3
-                print("ПРОДАНО!")
-                avto_garage_v[l] = money_avto[qh][hf]
-                money_avto[qh][hf] = "продано"
+                if money_avto[qh][hf] != "продано":
+                    print("ПРОДАНО!")
+                    avto_garage_v[l] = money_avto[qh][hf]
+                    money_avto[qh][hf] = "продано"
+                else:
+                    print("вы уже купили это авто...")
             elif ot == "5":
                 hf = 4
-                print("ПРОДАНО!")
-                avto_garage_v[l] = money_avto[qh][hf]
-                money_avto[qh][hf] = "продано"
+                if money_avto[qh][hf] != "продано":
+                    print("ПРОДАНО!")
+                    avto_garage_v[l] = money_avto[qh][hf]
+                    money_avto[qh][hf] = "продано"
+                else:
+                    print("вы уже купили это авто...")
             else:
                 print("*нервно*:Ну... Ладно...")
         elif ot == "3":
@@ -118,29 +148,44 @@ while kr:
             ot = input("покупаем?")
             if ot == "1":
                 hf = 0
-                print("ПРОДАНО!")
-                avto_garage_v[l] = money_avto[qh][hf]
-                money_avto[qh][hf] = "продано"
+                if money_avto[qh][hf] != "продано":
+                    print("ПРОДАНО!")
+                    avto_garage_v[l] = money_avto[qh][hf]
+                    money_avto[qh][hf] = "продано"
+                else:
+                    print("вы уже купили это авто...")
             elif ot == "2":
                 hf = 1
-                print("ПРОДАНО!")
-                avto_garage_v[l] = money_avto[qh][hf]
-                money_avto[qh][hf] = "продано"
+                if money_avto[qh][hf] != "продано":
+                    print("ПРОДАНО!")
+                    avto_garage_v[l] = money_avto[qh][hf]
+                    money_avto[qh][hf] = "продано"
+                else:
+                    print("вы уже купили это авто...")
             elif ot == "3":
                 hf = 2
-                print("ПРОДАНО!")
-                avto_garage_v[l] = money_avto[qh][hf]
-                money_avto[qh][hf] = "продано"
+                if money_avto[qh][hf] != "продано":
+                    print("ПРОДАНО!")
+                    avto_garage_v[l] = money_avto[qh][hf]
+                    money_avto[qh][hf] = "продано"
+                else:
+                    print("вы уже купили это авто...")
             elif ot == "4":
                 hf = 3
-                print("ПРОДАНО!")
-                avto_garage_v[l] = money_avto[qh][hf]
-                money_avto[qh][hf] = "продано"
+                if money_avto[qh][hf] != "продано":
+                    print("ПРОДАНО!")
+                    avto_garage_v[l] = money_avto[qh][hf]
+                    money_avto[qh][hf] = "продано"
+                else:
+                    print("вы уже купили это авто...")
             elif ot == "5":
                 hf = 4
-                print("ПРОДАНО!")
-                avto_garage_v[l] = money_avto[qh][hf]
-                money_avto[qh][hf] = "продано"
+                if money_avto[qh][hf] != "продано":
+                    print("ПРОДАНО!")
+                    avto_garage_v[l] = money_avto[qh][hf]
+                    money_avto[qh][hf] = "продано"
+                else:
+                    print("вы уже купили это авто...")
             else:
                 print("*нервно*:Ну... Ладно...")
         elif ot == "4":
@@ -151,29 +196,44 @@ while kr:
             ot = input("покупаем?")
             if ot == "1":
                 hf = 0
-                print("ПРОДАНО!")
-                avto_garage_v[l] = money_avto[qh][hf]
-                money_avto[qh][hf] = "продано"
+                if money_avto[qh][hf] != "продано":
+                    print("ПРОДАНО!")
+                    avto_garage_v[l] = money_avto[qh][hf]
+                    money_avto[qh][hf] = "продано"
+                else:
+                    print("вы уже купили это авто...")
             elif ot == "2":
                 hf = 1
-                print("ПРОДАНО!")
-                avto_garage_v[l] = money_avto[qh][hf]
-                money_avto[qh][hf] = "продано"
+                if money_avto[qh][hf] != "продано":
+                    print("ПРОДАНО!")
+                    avto_garage_v[l] = money_avto[qh][hf]
+                    money_avto[qh][hf] = "продано"
+                else:
+                    print("вы уже купили это авто...")
             elif ot == "3":
                 hf = 2
-                print("ПРОДАНО!")
-                avto_garage_v[l] = money_avto[qh][hf]
-                money_avto[qh][hf] = "продано"
+                if money_avto[qh][hf] != "продано":
+                    print("ПРОДАНО!")
+                    avto_garage_v[l] = money_avto[qh][hf]
+                    money_avto[qh][hf] = "продано"
+                else:
+                    print("вы уже купили это авто...")
             elif ot == "4":
                 hf = 3
-                print("ПРОДАНО!")
-                avto_garage_v[l] = money_avto[qh][hf]
-                money_avto[qh][hf] = "продано"
+                if money_avto[qh][hf] != "продано":
+                    print("ПРОДАНО!")
+                    avto_garage_v[l] = money_avto[qh][hf]
+                    money_avto[qh][hf] = "продано"
+                else:
+                    print("вы уже купили это авто...")
             elif ot == "5":
                 hf = 4
-                print("ПРОДАНО!")
-                avto_garage_v[l] = money_avto[qh][hf]
-                money_avto[qh][hf] = "продано"
+                if money_avto[qh][hf] != "продано":
+                    print("ПРОДАНО!")
+                    avto_garage_v[l] = money_avto[qh][hf]
+                    money_avto[qh][hf] = "продано"
+                else:
+                    print("вы уже купили это авто...")
             else:
                 print("*нервно*:Ну... Ладно...")
         elif ot == "5":
@@ -184,29 +244,44 @@ while kr:
             ot = input("покупаем?")
             if ot == "1":
                 hf = 0
-                print("ПРОДАНО!")
-                avto_garage_v[l] = money_avto[qh][hf]
-                money_avto[qh][hf] = "продано"
+                if money_avto[qh][hf] != "продано":
+                    print("ПРОДАНО!")
+                    avto_garage_v[l] = money_avto[qh][hf]
+                    money_avto[qh][hf] = "продано"
+                else:
+                    print("вы уже купили это авто...")
             elif ot == "2":
                 hf = 1
-                print("ПРОДАНО!")
-                avto_garage_v[l] = money_avto[qh][hf]
-                money_avto[qh][hf] = "продано"
+                if money_avto[qh][hf] != "продано":
+                    print("ПРОДАНО!")
+                    avto_garage_v[l] = money_avto[qh][hf]
+                    money_avto[qh][hf] = "продано"
+                else:
+                    print("вы уже купили это авто...")
             elif ot == "3":
                 hf = 2
-                print("ПРОДАНО!")
-                avto_garage_v[l] = money_avto[qh][hf]
-                money_avto[qh][hf] = "продано"
+                if money_avto[qh][hf] != "продано":
+                    print("ПРОДАНО!")
+                    avto_garage_v[l] = money_avto[qh][hf]
+                    money_avto[qh][hf] = "продано"
+                else:
+                    print("вы уже купили это авто...")
             elif ot == "4":
                 hf = 3
-                print("ПРОДАНО!")
-                avto_garage_v[l] = money_avto[qh][hf]
-                money_avto[qh][hf] = "продано"
+                if money_avto[qh][hf] != "продано":
+                    print("ПРОДАНО!")
+                    avto_garage_v[l] = money_avto[qh][hf]
+                    money_avto[qh][hf] = "продано"
+                else:
+                    print("вы уже купили это авто...")
             elif ot == "5":
                 hf = 4
-                print("ПРОДАНО!")
-                avto_garage_v[l] = money_avto[qh][hf]
-                money_avto[qh][hf] = "продано"
+                if money_avto[qh][hf] != "продано":
+                    print("ПРОДАНО!")
+                    avto_garage_v[l] = money_avto[qh][hf]
+                    money_avto[qh][hf] = "продано"
+                else:
+                    print("вы уже купили это авто...")
             else:
                 print("*нервно*:Ну... Ладно...")
         else:
